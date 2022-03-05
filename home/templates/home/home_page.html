@@ -11,5 +11,21 @@
 {% block content %}
 <div class="container mt-5">
 {{page.body | richtext}}
+
+<br>
+<div>
+    <h3>Últimas noticias</h3>
+    {% for noticia in noticias %}
+    <div class="noticia mt-4">
+        <h5><a href="{{noticia.get_url}}">{{ noticia.title }}:</a></h5> 
+        {{ noticia.intro }}
+    </div>
+    {% endfor %}
+    <div style="float: right;"><a href="//localhost:8000/noticias-pel%C3%ADculas/">Ver todas las noticias</a></div>
 </div>
+
+
+</div>
+<br>
+<br>
 {% endblock content %}

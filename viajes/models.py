@@ -1,6 +1,4 @@
 from django.db import models
-
-# Create your models here.
 from wagtail.admin.edit_handlers import FieldPanel
 from wagtail.core.models import Page 
 from wagtail.core.fields import RichTextField
@@ -50,4 +48,3 @@ class ViajesPage(Page):
         except EmptyPage:
             pages = paginator.page(paginator.num_pages)
         return pages
-

@@ -28,12 +28,13 @@ INSTALLED_APPS = [
     'search',
     'blog',
     'pelis',
+    'viajes',
 
-    'canciones',
+    
     'contacto',
     'playas',
     'menus',
-    'viajes',
+    
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
     'wagtail.search',
     'wagtail.admin',
     'wagtail.core',
+    'wagtailfontawesome',
 
     
 

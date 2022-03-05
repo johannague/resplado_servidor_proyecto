@@ -1,3 +1,4 @@
+from tabnanny import verbose
 from django.db import models
 from django import forms
 
@@ -119,7 +120,7 @@ class FooterText(models.Model):
     `register_snippet` to allow it to be accessible via the admin. It is made
     accessible on the template via a template tag defined in base/templatetags/
     navigation_tags.py
-    """
+    
     body = RichTextField()
 
     panels = [
@@ -131,3 +132,13 @@ class FooterText(models.Model):
 
     class Meta:
         verbose_name_plural = 'Footer Text'
+    """
+    titulo = models.CharField(max_length=250)
+    url=  models.URLField(blank=True)
+
+    def __str__(self):
+        return self.titulo
+    
+    class Meta:
+        verbose_name = 'Footer'
+
